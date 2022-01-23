@@ -637,6 +637,11 @@ footer {
             object-fit: cover;
         }
     }
+    .float-right {
+        @media screen and(max-width: $max) {
+            margin-bottom: 8px;
+        }
+    }
     .slick-slide {
         margin: 0 16px;
     }
@@ -647,6 +652,12 @@ footer {
     .slick-prev,
     .slick-next {
         top: 110% !important;
+    }
+    .slick-next {
+        right: 0 !important;
+    }
+    .slick-prev {
+        left: 0 !important;
     }
     &__slide {
         position: relative;
@@ -723,6 +734,9 @@ footer {
             margin-bottom: 8px;
             position: relative;
             overflow: hidden;
+            @media screen and (max-width: $max) {
+                height: 230px;
+            }
             .date {
                 position: absolute;
                 // bottom: 0;
@@ -806,7 +820,7 @@ footer {
         margin-bottom: 24px;
         cursor: pointer;
         // border: 1px solid;
-        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .2);
+        // box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .2);
         height: 110px;
         padding: 8px;
         background-color: white;
@@ -950,7 +964,7 @@ footer {
     a {
         color: black;
         float: left;
-        font-family: 'Evogria', sans-serif;
+        font-family: 'Avenir-Bold', sans-serif;
         padding: 4px 8px;
         font-size: 12px;
         background: white;
@@ -1038,12 +1052,28 @@ footer {
 .about-home,
 .about {
     position: relative;
+    .content-text {
+        @media screen and (max-width: $max) {
+            font-size: 14px;
+        }
+    }
+}
+
+.content-text {
+    @media screen and (max-width: $max) {
+        font-size: 14px;
+    }
 }
 
 .about {
+    h2 {
+        position: relative;
+        z-index: 3;
+    }
     .welcome {
         top: 16px;
         bottom: initial;
+        z-index: 1;
     }
 }
 
@@ -1107,6 +1137,8 @@ footer {
 }
 
 .leaders {
+    position: relative;
+    z-index: 4;
     .thumb {
         margin-bottom: 16px;
         .image {
