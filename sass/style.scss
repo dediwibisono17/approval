@@ -23,14 +23,14 @@
     font-family: "Avenir";
     src: url('fonts/AvenirLTStd-Roman');
     src: local('BMWMotorradW05-Regular');
-    src: url('AvenirLTStd-Roman') format('woff2');
+    src: url('AvenirLTStd-Roman.woff2') format('woff2');
 }
 
 @font-face {
     font-family: "Avenir-Bold";
     src: url('fonts/AvenirLTStd-Black');
     src: local('BMWMotorradW05-Regular');
-    src: url('AvenirLTStd-Black') format('woff2');
+    src: url('AvenirLTStd-Black.woff2') format('woff2');
 }
 
 $color-primary: #0a2f70;
