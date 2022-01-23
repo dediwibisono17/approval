@@ -19,6 +19,11 @@ $(".banner__slider").slick({
     // autoplayspeed: 2000
 });
 
+$('.banner__slider').on('init', function(slick) {
+    console.log('fired!');
+    $('.banner__slider').fadeIn(3000);
+});
+
 $(".event-slider").slick({
     dots: false,
     infinite: true,
