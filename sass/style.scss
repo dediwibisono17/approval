@@ -224,7 +224,7 @@ body,
 main,
 html {
     font-family: 'Avenir', sans-serif;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .img {
@@ -1058,6 +1058,7 @@ footer {
 .about-home,
 .about {
     position: relative;
+    overflow-x: hidden;
     .content-text {
         @media screen and (max-width: $max) {
             font-size: 14px;
@@ -1195,4 +1196,128 @@ footer {
 .icon.slick-initialized {
     visibility: visible;
     opacity: 1;
+}
+
+.timer {
+    display: block;
+    margin: 0 auto;
+    &__box {
+        display: inline-block;
+        // border: 1px solid;
+        font-size: 72px;
+        margin: 0 24px;
+    }
+}
+
+.contact-us {
+    .side {
+        display: block;
+        cursor: pointer;
+        &:hover {
+            i {
+                // color: $color-yellow;
+                // color: #4285F4;
+                margin-top: -8px;
+            }
+            .upper {
+                color: $color-primary;
+            }
+        }
+        &-left {
+            display: inline-block;
+            width: 20%;
+            vertical-align: top;
+            i {
+                font-size: 42px !important;
+                color: $color-primary;
+                transition: .3s;
+            }
+        }
+        &-right {
+            display: inline-block;
+            width: 75%;
+            .upper {
+                transition: .5s;
+                // color: #4285F4;
+                // color: $color-yellow;
+            }
+        }
+    }
+}
+
+#values {
+    .sticky {
+        position: fixed;
+        top: 120px;
+        // width: 100%;
+    }
+    .image {
+        width: 320px;
+        height: 320px;
+        margin: 0 auto 16px;
+        position: sticky;
+        top: 52px;
+        // background-color: blue;
+        // padding-left: 10%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .side {
+        display: block;
+        &-left {
+            display: inline-block;
+            width: 10%;
+            vertical-align: top;
+            padding: 8px 0;
+            i {
+                font-size: 36px;
+                @media screen and (max-width: $max) {
+                    font-size: 30px;
+                }
+            }
+        }
+        &-right {
+            display: inline-block;
+            width: 85%;
+            margin-left: 8px;
+            @media screen and (max-width: $max) {
+                margin-left: 12px;
+            }
+            .title {
+                font-size: 36px;
+                @media screen and (max-width: $max) {
+                    font-size: 24px;
+                }
+            }
+            .text {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.jobs {
+    background-color: $color-yellow;
+    border-radius: 8px;
+    color: $color-primary !important;
+}
+
+.fit-content {
+    width: fit-content;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        @media screen and (max-width: $max) {
+            object-fit: cover;
+        }
+    }
+    @media screen and (max-width:$max) {
+        width: 100%;
+        overflow-x: hidden;
+        height: 360px;
+    }
 }
