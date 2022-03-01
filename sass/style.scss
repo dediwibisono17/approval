@@ -160,6 +160,9 @@ $max:767px;
 }
 
 .font {
+    &-200 {
+        font-weight: normal !important;
+    }
     &-bold {
         // font-weight: bold;
         font-family: 'Avenir-Bold', sans-serif;
@@ -212,6 +215,9 @@ $max:767px;
     &-danger {
         color: red;
     }
+    &-grey {
+        color: #646363;
+    }
 }
 
 .back {
@@ -222,12 +228,12 @@ $max:767px;
 }
 
 main {
-    margin-bottom: 278px;
+    // margin-bottom: 278px;
     z-index: 88;
     position: relative;
     background: white;
     @media screen and (max-width: $max) {
-        margin-bottom: 478px;
+        // margin-bottom: 478px;
     }
 }
 
@@ -450,6 +456,13 @@ section {
                 }
             }
         }
+    }
+}
+
+.image {
+    width: 100%;
+    img {
+        width: 100%;
     }
 }
 
@@ -1589,6 +1602,8 @@ footer {
 ul.breadcumb {
     padding: 10px 16px;
     list-style: none;
+    position: relative;
+    z-index: 8;
     // background-color: #eee;
     @media screen and (max-width: $max) {
         padding: 10px 0;
@@ -1631,6 +1646,18 @@ ul.breadcumb li a:hover {
             td {
                 font-weight: bold;
                 border-top: 1px solid transparent;
+                font-size: 14px;
+                // border: 1px solid;
+                &:first-child {
+                    vertical-align: middle;
+                }
+                .rp {
+                    top: 10px;
+                    z-index: 200;
+                }
+                .uang {
+                    padding-left: 20px;
+                }
                 .form-control {
                     @media screen and (max-width: $max) {
                         margin-bottom: 8px;
@@ -1639,6 +1666,7 @@ ul.breadcumb li a:hover {
                     border-top: 2px solid transparent;
                     border-left: 2px solid transparent;
                     border-right: 1px solid transparent;
+                    background-color: #f9fafb;
                     transition: 0.4s;
                     &:focus {
                         border-bottom: 2px solid $color-primary;
@@ -1652,7 +1680,7 @@ ul.breadcumb li a:hover {
         padding: 0;
         list-style-type: none;
         li {
-            border-bottom: 1px solid #bbb;
+            border-bottom: 1px solid transparent;
             padding: 8px;
             &:last-child {
                 border-bottom: 1px solid transparent;
@@ -1673,7 +1701,8 @@ ul.breadcumb li a:hover {
         img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px #444;
             object-fit: cover;
         }
     }
@@ -1708,5 +1737,158 @@ ul.breadcumb li a:hover {
     td {
         font-weight: bold;
         border-top: 1px solid transparent;
+    }
+}
+
+#job-profile {
+    .hero {
+        position: relative;
+        z-index: 3;
+        .bg-help {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 4;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.akun-internal {
+    .wrap-top {
+        padding: 16px;
+        .file {
+            display: inline-block;
+            margin-right: 8px;
+            border: 1px solid;
+            padding: 8px;
+            text-align: center;
+        }
+    }
+    .image {
+        width: 100%;
+        height: 180px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.show-hide {
+    position: absolute;
+    right: 16px;
+    top: 6px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.register {
+    position: relative;
+    .form-control {
+        border: 1px solid #999;
+    }
+    .bg-help {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 9;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .totop {
+        position: relative;
+        z-index: 14;
+    }
+}
+
+// .bubble {
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 20px;
+//     bottom: 0;
+//     z-index: 999;
+// }
+#jobs-footer {
+    position: initial;
+    background-color: rgba($color: #000000, $alpha: .1);
+    padding: 24px 16px;
+    border-top: 2px solid $color-primary;
+    // box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    .top {
+        display: block;
+        .sosmed_icon {
+            display: inline-block;
+            // margin-right: 4px;
+            i {
+                font-size: 16px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1.5px solid;
+                text-align: center;
+                padding: 4px 2px;
+            }
+        }
+    }
+    .float-left {
+        @media screen and(max-width: 766px) {
+            margin: 0 auto 18px;
+            display: block;
+            text-align: center;
+            width: fit-content;
+        }
+    }
+    .float-right,
+    .float-left {
+        @media screen and(max-width: 766px) {
+            float: initial !important;
+        }
+    }
+    .text-right {
+        @media screen and(max-width: 766px) {
+            text-align: center !important;
+        }
+    }
+    a {
+        color: #000000;
+        transition: .3s;
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+    .image {
+        width: 120px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.image-job {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }
